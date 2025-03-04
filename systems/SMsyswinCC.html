@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+        <style>
+        body {
+            user-select: none; /* 禁止选择文本 */
+        }
+    </style>
+    <script src="../js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Encotown Team">
+    <meta name="generator" content="Bootstrap5.3.3">
+    <title>Siemens Wincc</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+   <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+  </symbol>
+  
+<symbol id="bootstrap" viewBox="0 16 44 130">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10 H 75 V 40 H 40 V 60 H 76 V 75 H78 H40  V100 H80 V130 H 0 Z"></path>
+  </symbol>
+</svg>
+
+<div class="col-lg-8 mx-auto p-0 py-md-3">
+      <header class="d-flex align-items-center pb-0 mb-4 border-bottom">
+      <svg class="bi me-0" width="100" height="95" color="orange"><use xlink:href="#bootstrap"/></svg>
+
+      <div class="row">
+      <div class="col-sm">     
+      <span class="fs-6" style="color:orange; font-size: 18px; margin-left: -7px;">Service</span>
+      </div>
+      <div class="row">
+      <div class="col-sm">  
+      <span style="font-family: 'Arial', serif; font-weight: bold; color:black; font-size: 50px; margin-left: 0px;">ncotown</span>
+
+</div>
+
+ </header>
+
+
+  <main>
+     
+ 
+<h5 class="text-body-emphasis">Siemens SIMATIC WINCC</h5>
+<img src="../icons/SMsys.png" class="img-fluid d-block mx-auto" alt="Centered  image" width="100%" oncontextmenu="return false;"><br>
+<h6 class="text-body-emphasis">SIMATIC Wincc过程可视化系统</h6>
+<p  style="font-size: 20px;line-height: 1.6;">基于 PC 的 HMI 系统，适用于对各种行业的生产过程、生产工序、机器设备和工厂进行可视化及操作控制。该系统不仅支持简单的单站系统，同时还支持带有冗余服务器的分布式多站系统，以及基于Web的全球解决方案。功能强大的WinCC，是整个公司实现信息纵向集成的数据交换枢纽。基于开放式编程接口，西门子开发了大量的 WinCC 选件，并协同外部合作 伙伴共同开发了各种 WinCC 附加件，构建了一个完整的 SCADA 软件生态系统。</p>
+
+<p  style="font-size: 20px;line-height: 1.6;">功能及应用特点</p>
+<p  style="font-size: 20px;line-height: 1.6;">
+● 多功能<br> 
+适用于所有行业的解决方案 -多语言支持，全球适用 -可集成到所有自动化解决方案中。<br>
+● 集成所有 HMI 功能 <br>
+用户管理 -操作员监控 -事件报告、确认和归档 -测量值的采集、压缩和归档（含长期备份） -过程与组态数据的记录和归档。<br>
+● 快速高效的系统组态<br>
+组态向导极大简化了组态过程 -通过交叉引用列表可以查阅画面对象属性支持多语言软件组态，组态工具轻松应对海量数据，轻松实现画面和面板的知识保护
+<br>
+● 强大的可扩展性<BR>
+单站组态快速扩展为客户机/服务器架构；冗余服务器显著提升系统可用性； 轻松实现基于 Web 的过程可视化，无论是PC还是手机之类的智能移动终端。<br>
+● 开放式标准，系统集成更为轻松便捷 <br>
+采用功能强大的实时数据库 Microsoft SQL Server，支持 ActiveX 控件的开放式应用模块；采用 VBS 或 C 脚本实现应用扩展；基于 OPC 和 OPC UA 标准进行跨供应商通信<br>
+
+<p style="font-family:"Arial" font-size: 18px;">S7-200SMART</p>
+<img src="../icons/SMsmart200.png" class="img-fluid d-block mx-auto" alt="Centered  image" oncontextmenu="return false;""><br>
+<p  style="font-size: 20px;line-height: 1.6;">S7-200 SMART 系列包括许多微型可编程逻辑控制器 (Micro PLC, Micro Programmable
+Logic Controller)，S7-200 SMART 系列产品结构紧凑、成本低廉且具有功能强大的指令集，是控制小型应用的完美解决方案。S7-200 SMART 产品多种多样且提供基于 Windows的编程工具，可以灵活地解决各种小规模的自动化问题。
+
+</p>
+<p style="font-family:"Arial" font-size: 18px;">S7-1200系列</p>
+<img src="../icons/SMs71200.png" class="img-fluid d-block mx-auto" alt="Centered  image" oncontextmenu="return false;""><br>
+<p  style="font-size: 20px;line-height: 1.6;">
+S7-1200 系列是一款可编程逻辑控制器 (PLC, Programmable Logic Controller)，可以控制各种自动化应用。 S7-1200 设计紧凑、成本低廉且具有功能强大的指令集，这些特点使它成为控制各种中小型应用的完美解决方案。S7-1200 型号和基于 Windows 的编程工具提供了解决自动化问题时需要的灵活性。</p>
+
+
+<p style="font-family:"Arial" font-size: 18px;">SIMATIC S7-1200 的显著特性</p>
+<p  style="font-size: 20px;line-height: 1.6;">
+
+• 以宽幅 AC 或 DC 电源形式集成的电源 (85 - 264 V AC 或 24 V DC)；  <br> 
+• 集成 24V DC 数字量输入 (85 - 264 V AC 或 24 V DC)；  <br>
+• 集成的以太网接口； <br>  
+• 集成数字量输出 24V DC 或继电器； <br> 
+• 频率高达 100 kHz 的高速计数器 (HSC)；  <br> 
+• 频率高达 100 kHz 的脉冲序列输出 (PTO)；  <br> 
+• 通过信号板直接在 CPU 上扩展信号通道实现模块化和可裁剪性同时保持 CPU 原有空间；  <br> 
+• 通过扩展模块的大量模拟量和数字量输入和输出信号实现模块化和可裁剪性；  <br> 
+• 通过连接附加通信模块 (如：RS 485 或 RS232) 实现了模块化和可裁剪性；  <br> 
+• 可选的存储器 (SIMATIC 存储卡)；  <br> 
+• 所有模块上的端子都可拆卸 ；  <br> 
+• 密码保护；  <br> 
+
+
+
+
+
+
+
+
+
+
+</p>
+
+<br>
+
+
+
+ </main>
+  <footer class="pt-2 my-5 text-body-secondary border-top text-center" style="font-size: 15px;">
+<img src="../icons/contact.png" oncontextmenu="return false;"><br>
+特别声明：本站内容仅供相关人员参考使用，不作为任何用户依据.<br>
+    &middotEcotown All right reserved&copy2025 苏ICP备12345678号&middot; 
+  </footer>
+</div>
+<script src="../dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

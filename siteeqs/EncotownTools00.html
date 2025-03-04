@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <script src="../js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Encotown">
+    <meta name="generator" content="Bootstrap5.3.3">
+    <title>Encotown Tool</title>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px; /* Spacing between the two calculators */
+        }
+
+        .container {
+            width: 48%; /* Make each calculator take 48% of the available space */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%; /* On smaller screens, make calculators stack */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+  </symbol>
+  
+<symbol id="bootstrap" viewBox="0 16 44 130">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10 H 75 V 40 H 40 V 60 H 76 V 75 H78 H40  V100 H80 V130 H 0 Z"></path>
+  </symbol>
+</svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                    Light
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                    Dark
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                    Auto
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-lg-8 mx-auto p-0 py-md-3">
+        <header class="d-flex align-items-center pb-0 mb-3 border-bottom">
+            <svg class="bi me-0" width="100" height="95" fill="orange"><use xlink:href="#bootstrap"/></svg>
+            <div class="row">
+                <div class="col-sm">
+                    <span class="fs-6" style="color:orange; font-size: 18px; margin-left: -5px;">Service</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <span class="fs-2"> ncotown</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+           
+ <!-- 计算露点温度工具 -->
+        <div class="container-wrapper">
+            <div class="container">
+                <h4>温度湿度露点计算器</h4>
+                <div class="input-group">
+                    <label for="temperature">温度 (°C):</label>
+                    <input type="number" id="temperature" placeholder="输入温度">
+                </div>
+                <div class="input-group">
+                    <label for="humidity">湿度 (%):</label>
+                    <input type="number" id="humidity" placeholder="输入湿度">
+                </div>
+                <button class="btn" onclick="calculateDewPoint()">计算露点</button>
+                <div class="result">
+                    <p id="dewPointResult"></p>
+                </div>
+            </div>
+
+            <!-- 计算湿度工具 -->
+            <div class="container">
+                <h6>温度露点湿度计算器</h6>
+                <div class="input-group">
+                    <label for="temperatureForHumidity">温度 (°C):</label>
+                    <input type="number" id="temperatureForHumidity" placeholder="输入温度">
+                </div>
+                <div class="input-group">
+                    <label for="dewPointForHumidity">露点温度 (°C):</label>
+                    <input type="number" id="dewPointForHumidity" placeholder="输入露点温度">
+                </div>
+                <button class="btn" onclick="calculateHumidity()">计算湿度</button>
+                <div class="result">
+                    <p id="humidityResult"></p>
+                </div>
+            </div>
+    </div>
+
+        <footer class="pt-2 my-5 text-body-secondary border-top text-center" style="font-size: 18px;">
+            <img src="../icons/contact.png"><br>
+            特别声明：本站内容仅供相关人员参考使用，不作为任何用户依据.<br>
+            &middot Encotown All right reserved &copy2025 苏ICP备12345678号&middot;
+        </footer>
+    </div>
+
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+        // 计算饱和蒸气压的函数
+        function saturationVaporPressure(T) {
+            return 6.11 * Math.pow(10, (7.5 * T) / (T + 237.3));
+        }
+
+        // 根据温度和湿度计算露点的函数
+        function calculateDewPoint() {
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const humidity = parseFloat(document.getElementById('humidity').value);
+
+            if (isNaN(temperature) || isNaN(humidity)) {
+                alert("请输入有效的温度和湿度值！");
+                return;
+            }
+
+            if (humidity < 0 || humidity > 100) {
+                alert("湿度值应在0到100之间！");
+                return;
+            }
+
+            const dewPoint = temperature - ((100 - humidity) / 5);
+            document.getElementById('dewPointResult').innerText = `露点温度为: ${dewPoint.toFixed(2)}°C`;
+        }
+
+        // 根据温度和露点计算湿度的函数
+        function calculateHumidity() {
+            const temperature = parseFloat(document.getElementById('temperatureForHumidity').value);
+            const dewPoint = parseFloat(document.getElementById('dewPointForHumidity').value);
+
+            if (isNaN(temperature) || isNaN(dewPoint)) {
+                alert("请输入有效的温度和露点温度值！");
+                return;
+            }
+
+            const eT = saturationVaporPressure(temperature);
+            const eD = saturationVaporPressure(dewPoint);
+            const humidity = (eD / eT) * 100;
+            document.getElementById('humidityResult').innerText = `相对湿度为: ${humidity.toFixed(2)}%
+
+        }
+    </script>
+</body>
+</html>

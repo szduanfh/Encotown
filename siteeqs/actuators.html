@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    
+    <script src="../js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Encotown Team">
+    <meta name="generator" content="Bootstrap5.3.3">
+    <title>Encotown Cat-ACTVals</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+   <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+  </symbol>
+  
+<symbol id="bootstrap" viewBox="0 16 44 130">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10 H 75 V 40 H 40 V 60 H 76 V 75 H78 H40  V100 H80 V130 H 0 Z"></path>
+  </symbol>
+</svg>
+
+<div class="col-lg-8 mx-auto p-0 py-md-3">
+      <header class="d-flex align-items-center pb-0 mb-4 border-bottom">
+      <svg class="bi me-0" width="100" height="95" color="orange"><use xlink:href="#bootstrap"/></svg>
+
+      <div class="row">
+      <div class="col-sm">     
+      <span class="fs-6" style="color:orange; font-size: 18px; margin-left: -7px;">Service</span>
+      </div>
+      <div class="row">
+      <div class="col-sm">  
+      <span style="font-family: 'Arial', serif; font-weight: bold; color:black; font-size: 50px; margin-left: 0px;">ncotown</span>
+
+</div>
+
+ </header>
+
+
+  <main>
+     
+ 
+<h5 class="text-body-emphasis">控制阀</h5>
+<p  style="font-size: 22px;line-height: 1.8;">控制阀组主要有安装在管道上的阀门和与之配套的控制执行器组合而成，一般按阀门的连接方式分为螺纹（丝扣）阀和法兰阀； 按执行机构的驱动方式分为电动阀和气动阀；按执行机构控制类型可分为比例调节型和开关型； 以下列举的是工厂和楼宇中最常见的电动阀组型号及相关技术参数。</p>
+
+<div>
+
+
+            <div style="text-align: center; color: blue;">
+              <svg class="bi" width="26" height="10">use xlink:href=""/></svg>
+              控制阀门和电动执行机构
+            </div>
+     <hr class="col-3 col-md-12 mb-3">
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Honeywell VS9系列电磁阀
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Honeywell VN3系列电磁阀
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Honeywell VN8系列电磁阀
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+             Honeywell V5011P系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V5013P系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V5211F系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5011B2系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5011B3系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V5011S2系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5011S3系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5GV2系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5328A系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell V5088A系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell VBA16P系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell VBA16F系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell MVN系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell ML8824系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell ML6420A系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell ML7420A系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell ML7421A/B系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Honeywell ML7425A系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V8BFW16系列蝶阀阀组
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V9BF系列蝶阀阀组
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Honeywell V8BFW25系列蝶阀阀组
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VAF41系列阀组
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VAF41系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VAG60系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                Siemens VAG61系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Siemens VAI51系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VAI60系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VAI61系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VBF21系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VBG60系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VBG61系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VBI60系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VBI61系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VFL41系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VFW41系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VKF42系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF22系列阀门
+            </a>
+</li>
+
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF32系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF42系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF43系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF47系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF52系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF53系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF61系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVF63系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVG41系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VVG44系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF22系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF32系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF42系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF43系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF47系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXF53系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXG41系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens VXG44系列阀门
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAL31系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAL61系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAL81系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAS31系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAS61系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAS81系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAV系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SAX系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SBV系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SBX系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SKB系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SKC系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SKD系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SQL系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens SQX系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens STA系列执行器
+            </a>
+</li>
+<li>
+            <a class="icon-link mb-1" href="./siteeqs/actuators.html" >
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+               Siemens STP系列执行器
+            </a>
+</li>
+</div>
+
+
+
+  </main>
+  <footer class="pt-2 my-5 text-body-secondary border-top text-center" style="font-size: 15px;">
+<img src="../icons/contact.png"><br>
+特别声明：本站内容仅供相关人员参考使用，不作为任何用户依据.<br>
+    &middotEcotown All right reserved&copy2025 苏ICP备12345678号&middot; 
+  </footer>
+</div>
+<script src="../dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
